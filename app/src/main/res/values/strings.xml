@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Restaurant Finder</string>
+    <string name="map_not_ready">Map is not ready yet!</string>
+</resources>
