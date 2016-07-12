@@ -203,7 +203,7 @@ public class RestaurantFinderActivity extends AppCompatActivity implements OnMap
 
 
         // Needed options to create REST API
-        final int PROXIMITY_RADIUS = 5000;
+        final int PROXIMITY_RADIUS = 2000; // distance in meters within return place results
         final String GOOGLE_API_KEY = "AIzaSyCjf8oqcfm6g0BCwEcMmGljh5orZOqCGdM";
 
         // Create REST API call to get all restaurants in nearby area
@@ -214,12 +214,13 @@ public class RestaurantFinderActivity extends AppCompatActivity implements OnMap
         url.append("&sensor=true");
         url.append("&key=" + GOOGLE_API_KEY);
 
+        Log.i(TAG, "URL: " + url);
         // Call function to create task
         GooglePlacesReadTask googlePlacesReadTask = new GooglePlacesReadTask();
-        Object[] toPass = new Object[2];
-        toPass[0] = mMap;
-        toPass[1] = url.toString();
-        googlePlacesReadTask.execute(toPass);
+        Object[] urlObj = new Object[2];
+        urlObj[0] = mMap;
+        urlObj[1] = url.toString();
+        googlePlacesReadTask.execute(urlObj);
 
     }
 

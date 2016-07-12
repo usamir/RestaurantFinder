@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -16,7 +17,8 @@ import java.util.List;
  * Created by usamir on 10.7.2016.
  */
 public class PlacesDisplayTask extends AsyncTask<Object, Integer, List<HashMap<String, String>>> {
-    GoogleMap mMap;
+    private GoogleMap mMap;
+    final String TAG = "PlacesDisplayTask";
 
     @Override
     protected List<HashMap<String, String>> doInBackground(Object... inputObj) {
@@ -30,7 +32,7 @@ public class PlacesDisplayTask extends AsyncTask<Object, Integer, List<HashMap<S
             googlePlacesJson = new JSONObject((String) inputObj[1]);
             googlePlacesList = placeJsonParser.parse(googlePlacesJson);
         } catch (Exception e) {
-            Log.d("PlacesDisplayTask", "Error: " + e.toString());
+            Log.d(TAG, "Error: " + e.toString());
         }
         return googlePlacesList;
     }
@@ -45,15 +47,25 @@ public class PlacesDisplayTask extends AsyncTask<Object, Integer, List<HashMap<S
         for (int i = 0; i < list.size(); i++) {
 
             // Get google place, and get lat / lang of the object founded
-            HashMap<String, String> googlePlace = list.get(i);
-            LatLng objLatLng = new LatLng(Double.parseDouble(googlePlace.get("lat")),
-                    Double.parseDouble(googlePlace.get("lng")));
+            HashMap<String, String> place = list.get(i);
+            LatLng objLatLng = new LatLng(Double.parseDouble(place.get("lat")),
+                    Double.parseDouble(place.get("lng")));
+
+            String openNow = place.get("open_now");
+            String working = openNow;
+            if (openNow.contains("true")) {
+                working = " open";
+            } else if (openNow.contains("false")) {
+                working = " closed";
+            }
 
             // Create marker for find nearby objects
             MarkerOptions markerOptions = new MarkerOptions()
                     .position(objLatLng)
-                    .title(googlePlace.get("place_name") + " : " + googlePlace.get("vicinity"));
+                    .title(place.get("place_name") + " | Working: " + working + " | Rating: " + place.get("rating"))
+                    .icon(BitmapDescriptorFactory.fromResource(R.mipmap.restaurant_building));
             mMap.addMarker(markerOptions);
+
         }
     }
 }

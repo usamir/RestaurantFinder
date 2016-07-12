@@ -61,6 +61,8 @@ public class Places {
         String latitude = "";
         String longitude = "";
         String reference = "";
+        String openNow = "N\\A";
+        String rating = "N\\A";
 
         try {
             if (!googlePlaceJson.isNull("name")) {
@@ -71,15 +73,25 @@ public class Places {
                 vicinity = googlePlaceJson.getString("vicinity");
             }
 
+            if (!googlePlaceJson.isNull("opening_hours")) {
+                openNow = googlePlaceJson.getJSONObject("opening_hours").getString("open_now");
+            }
+
             latitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lat");
             longitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lng");
             reference = googlePlaceJson.getString("reference");
+            if (!googlePlaceJson.isNull("rating")) {
+                rating = googlePlaceJson.getString("rating");
+            }
 
             map.put("place_name", placeName);
             map.put("vicinity", vicinity);
             map.put("lat", latitude);
             map.put("lng", longitude);
             map.put("reference", reference);
+            map.put("open_now", openNow);
+            map.put("rating", rating);
+
         } catch (JSONException e) {
             e.printStackTrace();
             Log.d(TAG, "Error: " + e.getLocalizedMessage());
