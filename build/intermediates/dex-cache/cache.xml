@@ -1,3 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\d805b783e00e78f5b1e00fec6c7face1208b8030\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8ec9ae00d45e758ac5b7a1c5dc0daa8a4b24280f">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1418ecb04a20aca14efa124861d96f082571f37b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ad4f495a15b00adf7584490dac150166812a9266">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c441e3909b02718cfc8ba156753406c070d0d19a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_035f130adee8919cbfef7ff66488455d19176f4f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\7698f1fd980ca5639eb29bcc86c1db98f49d06e1\output\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_732c524057807b67d4b97ae58c877769de003d03\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\7698f1fd980ca5639eb29bcc86c1db98f49d06e1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_00cd9f258da47303532a26e79de58652fd38544b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\220c6aced8f83a3f54dcf6799248b8f6746afdbf\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="30489a97b06cc3945bdbcc1770089af9e3b3b64d">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_481c946ad5ceadb885adba2c60d095d4db4cf881\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_61dc8e16734d519aaa89c7d6062f0de21db9ad95\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\a8b00f55e033854856face9f777cb89dbdc3f318\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="299e04800d1169b9f3dd04c376c7b266a3594cca">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0fc2860b2c7033bfe391814bc1ed25b1ac96795c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\9a38a3e2eb57eefd3bb449ede438ac411a7f9477\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2a11b7ee15dc6a4ca9a4e0c23e7956fa73f24404\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\1f8c02af226268715fabb32fee3c8888ab6b0c3d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6147737cd16ee9a818b5008d19ed01398af98306\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\857dc2a2b7f78b6fe33a8103eec136165d938f72\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd7676ac12aa6653718b7ea33d93ce9d6915d526">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7b2f4105ccd2f3ae3e882e32be359d4c5dcf3c41\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\9b791694efe2b1ab5eb358edab1bf1874a4b15ef\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a03f4d605b0f29222c2ddf8b7896258cb4b92def">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_08bd96b3de999bbdd63e03375787ba1e7ced1ed1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\c878be080ef3cb98d667e612fb9a556ac547d27f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="593fbaec1c3e100480a2bd72457b64b7dde6ac2d">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3872d6e44342971620b653daed79528beebcf97c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\usamir\.android\build-cache\925b6115f3171f9371162700537942cad97eef93\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\usamir\Dropbox\Android\RestaurantFinder\RestaurantFinder\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3cbb1e176cb355fbff44b071dc03d0c96364786e\classes.dex" />
+    </item>
+
+</items>

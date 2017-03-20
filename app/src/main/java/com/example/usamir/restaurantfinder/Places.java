@@ -50,7 +50,7 @@ public class Places {
     }
 
     /**
-     * Get place out of json objects
+     * Get place information out of json objects
      * @param googlePlaceJson
      * @return
      */

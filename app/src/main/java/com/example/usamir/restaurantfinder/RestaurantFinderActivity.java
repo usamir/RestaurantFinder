@@ -46,37 +46,41 @@ public class RestaurantFinderActivity extends AppCompatActivity implements OnMap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_finder);
 
-        // Check is GPS enabled on device
-        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            showGPSDisabledAlertToUser();
+
+        // Check for permission for location
+        if (Utility.checkPermission(RestaurantFinderActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) &&
+                Utility.checkPermission(RestaurantFinderActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION)) {
+            // Check is GPS enabled on device
+            LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+            if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                showGPSDisabledAlertToUser();
+            }
+
+            // Create an instance of GoogleAPIClient.
+            if (mGoogleApiClient == null) {
+                mGoogleApiClient = new GoogleApiClient.Builder(this)
+                        .addConnectionCallbacks(this)
+                        .addOnConnectionFailedListener(this)
+                        .addApi(LocationServices.API)
+                        .addApi(Places.GEO_DATA_API)
+                        .addApi(Places.PLACE_DETECTION_API)
+                        .enableAutoManage(this, this)
+                        .build();
+            }
+
+            // Create the LocationRequest object
+            mLocationRequest = LocationRequest.create()
+                    .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                    .setInterval(5 * 1000)         // 5 seconds, in milliseconds
+                    .setFastestInterval(1000)      // 1 second, in milliseconds
+                    .setSmallestDisplacement(20);  // smallest displacement to 20 meters
+
+            // Create map fragment
+            SupportMapFragment mapFragment =
+                    (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+            mapFragment.getMapAsync(this);
+
         }
-
-        // Create an instance of GoogleAPIClient.
-        if (mGoogleApiClient == null) {
-            mGoogleApiClient = new GoogleApiClient.Builder(this)
-                    .addConnectionCallbacks(this)
-                    .addOnConnectionFailedListener(this)
-                    .addApi(LocationServices.API)
-                    .addApi(Places.GEO_DATA_API)
-                    .addApi(Places.PLACE_DETECTION_API)
-                    .enableAutoManage(this, this)
-                    .build();
-        }
-
-        // Create the LocationRequest object
-        mLocationRequest = LocationRequest.create()
-                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(5 * 1000)         // 5 seconds, in milliseconds
-                .setFastestInterval(1000)      // 1 second, in milliseconds
-                .setSmallestDisplacement(20);  // smallest displacement to 20 meters
-
-        // Create map fragment
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-
-
     }
 
     /**
