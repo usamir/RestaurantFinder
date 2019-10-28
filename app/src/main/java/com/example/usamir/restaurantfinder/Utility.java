@@ -7,9 +7,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
+
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.content.ContextCompat;
 
 /**
  * Created by usamir on 20.3.2017.
@@ -17,7 +18,7 @@ import android.support.v7.app.AlertDialog;
 
 
 public class Utility {
-    static int permissionRequest;
+    private static int permissionRequest;
     private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 123;
     private static final int MY_PERMISSIONS_REQUEST_CAMERA = 124;
     private static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 125;

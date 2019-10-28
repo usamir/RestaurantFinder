@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class PlacesDisplayTask extends AsyncTask<Object, Integer, List<HashMap<String, String>>> {
     private GoogleMap mMap;
-    final String TAG = "PlacesDisplayTask";
+    private final String TAG = "PlacesDisplayTask";
 
     @Override
     protected List<HashMap<String, String>> doInBackground(Object... inputObj) {
@@ -39,7 +39,7 @@ public class PlacesDisplayTask extends AsyncTask<Object, Integer, List<HashMap<S
 
     /**
      * Place markers of nearby objects to map
-     * @param list
+     * @param list list where to place markers
      */
     @Override
     protected void onPostExecute(List<HashMap<String, String>> list) {
